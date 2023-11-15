@@ -95,9 +95,10 @@ a:hover {
 }
 
 .teamBox {
-    background-color:#66a8e6;
-    border: #3e7cb6 solid;
+    background-color:white;
+    border: white solid;
     border-radius:10px;
+    color:black;
 }
 
 .teamMember {
@@ -117,7 +118,7 @@ a:hover {
     float:left;
     max-width:100px;
     margin:5px;
-    border:#3e7cb6 solid;
+    border:gray solid;
     border-radius:5px;
 }
 
@@ -131,7 +132,7 @@ a:hover {
     font-style:italic;
 }
 
-.teamPageHeading {
+.sectionHeading {
     display:inline-block;
     text-align:center;
     padding: 10px 15px;
@@ -166,11 +167,11 @@ a:hover {
 }
 
 #newsletterBox a:link {
-    color:#000000;
+    color:#1c5d99;
 }
 
 #newsletterBox a:hover {
-    color:#ffffff;
+    color:gray;
 }
 
 #newsletterBox p {
