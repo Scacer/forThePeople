@@ -3,5 +3,5 @@ function toggleGoalNav() {
     links.classList.toggle('showSubNav')
 }
 
-let goalsNav = document.querySelector('.goalsNav');
+let goalsNav = document.querySelector('#goalsNav');
 goalsNav.addEventListener("click", toggleGoalNav);

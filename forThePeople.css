@@ -35,13 +35,6 @@ a {
     text-decoration:none;
 }
 
-nav {
-    background-color:#3e7cb6;
-    color:white;
-    text-align:center;
-    height:50px;
-}
-
 a:link {
     color:white;
 }
@@ -61,37 +54,6 @@ a:hover {
 .active {
     font-weight:bold;
     background-color:#5593ce;
-}
-
-.nav {
-    display:inline-block;
-    padding:13px 20px;
-}
-
-.nav:hover {
-    background-color: lightblue;
-}
-
-.subNav {
-    height:0;
-    overflow:hidden;
-    background-color:#5593ce;
-}
-
-.subNav > li:hover {
-    background-color:#66a8e6
-}
-
-.showSubNav {
-    height:30px;
-    position:relative;
-    z-index:1;
-}
-
-.goalNav {
-    display:inline-block;
-    width: 32%;
-    font-size:small;
 }
 
 .teamBox {
@@ -137,7 +99,6 @@ a:hover {
     text-align:center;
     padding: 10px 15px;
     margin:10px;
-    background-color:#66a8e6;
     position:relative;
     left:50%;
     transform: translateX(-50%);
@@ -146,10 +107,19 @@ a:hover {
 .contactBox {
     float:left;
     margin:10px 2%;
+    min-height:100px;
 }
 
 .contactBox p, .contactBox h3 {
     text-align:center;
+}
+
+.contactBox a:link {
+    color:#1c5d99;
+}
+
+.contactBox a:hover {
+    color:gray;
 }
 
 
@@ -166,15 +136,112 @@ a:hover {
     width:55%;
 }
 
-#newsletterBox a:link {
-    color:#1c5d99;
-}
-
-#newsletterBox a:hover {
-    color:gray;
-}
-
 #newsletterBox p {
     margin: 0px 10px;
     font-size:20px;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+
+    header {
+        height:50px;
+    }
+
+    header h1 {
+        display:inline-block;
+        line-height:50%;
+    }
+
+    section {
+        flex-direction:column;
+    }
+
+    .mainNav, .subNav {
+        height:0;
+        overflow:hidden;
+    }
+
+    .showNav {
+        height:119px;
+    }
+
+    .nav, .goalNav {
+        display:block;
+        padding:10px;
+        font-size:small;
+        background:#3e7cb6;
+        text-align:center;
+    }
+
+    .nav:hover, .goalNav:hover {
+        background-color: #5593ce;
+    }
+
+    .active {
+        background-color: #5593ce;
+    }
+
+    nav {
+        position:absolute;
+        z-index:1;
+        justify-content:center;
+    }
+
+    #goalsNav {
+        display:none;
+    }
+
+    #hamburger {
+        display:block;
+        float:left;
+        padding:10px;
+    };
+
+}
+
+@media only screen and (min-width: 768px) {
+    nav {
+        background-color:#3e7cb6;
+        color:white;
+        text-align:center;
+        height:50px;
+    }
+
+    .nav {
+        display:inline-block;
+        padding:13px 20px;
+    }
+    
+    .nav:hover {
+        background-color: lightblue;
+    }
+    
+    .subNav {
+        height:0;
+        overflow:hidden;
+        background-color:#5593ce;
+    }
+    
+    .subNav > li:hover {
+        background-color:#66a8e6
+    }
+    
+    .showSubNav {
+        height:30px;
+        position:relative;
+        z-index:1;
+    }
+    
+    .goalNav {
+        display:inline-block;
+        width: 32%;
+        font-size:small;
+    }
+
+    #hamburger {
+        display:none;
+    }
+    
 }
