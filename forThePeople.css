@@ -104,12 +104,6 @@ a:hover {
     transform: translateX(-50%);
 }
 
-.contactBox {
-    float:left;
-    margin:10px 2%;
-    min-height:100px;
-}
-
 .contactBox p, .contactBox h3 {
     text-align:center;
 }
@@ -128,22 +122,15 @@ a:hover {
     cursor:pointer;
 }
 
-#emailBox {
-    width:35%;
-}
-
-#newsletterBox{
-    width:55%;
-}
-
-#newsletterBox p {
-    margin: 0px 10px;
-    font-size:20px;
-}
-
 /* Media Queries */
 
 @media only screen and (max-width: 768px) {
+
+    nav {
+        position:absolute;
+        z-index:1;
+        justify-content:center;
+    }
 
     header {
         height:50px;
@@ -183,11 +170,12 @@ a:hover {
         background-color: #5593ce;
     }
 
-    nav {
-        position:absolute;
-        z-index:1;
-        justify-content:center;
+    .teamMember, .contactBox {
+        display:block;
+        width:80%;
+        margin:20px 10%;
     }
+
 
     #goalsNav {
         display:none;
@@ -240,8 +228,27 @@ a:hover {
         font-size:small;
     }
 
+    .contactBox {
+        float:left;
+        margin:10px 2%;
+        min-height:100px;
+    }
+
     #hamburger {
         display:none;
+    }
+
+    #emailBox {
+        width:35%;
+    }
+    
+    #newsletterBox{
+        width:55%;
+    }
+    
+    #newsletterBox p {
+        margin: 0px 10px;
+        font-size:20px;
     }
     
 }
