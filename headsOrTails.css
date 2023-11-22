@@ -1,0 +1,136 @@
+body {
+        /* to position footer at bottom of browse viewport */
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+}
+
+footer {
+    background-color: #3e7cb6;
+    width: 100%;
+    height: 50px;
+    color: black;
+    text-align: center;
+
+    /* because the body is 100vh and in flex mode
+    this causes the footer to be pinned to the bottom of the viewport */
+    margin-top: auto;
+}
+
+header {
+    background-color:#1c5d99;
+    color:white;
+    text-align:center;
+    height:100px;
+}
+
+header > h1 {
+    line-height:200%;
+    padding-top:16px;
+}
+
+
+/* IDs */
+#ourGoalsButton:hover {
+    cursor:pointer;
+}
+
+@media only screen and (max-width: 768px) {
+
+    nav {
+        position:absolute;
+        z-index:1;
+        justify-content:center;
+    }
+
+    header {
+        height:50px;
+    }
+
+    header h1 {
+        display:inline-block;
+        line-height:50%;
+    }
+
+    .mainNav, .subNav {
+        height:0;
+        overflow:hidden;
+    }
+
+    .showNav {
+        height:119px;
+    }
+
+    .nav, .goalNav {
+        display:block;
+        padding:10px;
+        font-size:small;
+        background:#3e7cb6;
+        text-align:center;
+    }
+
+    .nav:hover, .goalNav:hover {
+        background-color: #5593ce;
+    }
+
+    .active {
+        background-color: #5593ce;
+    }
+
+
+    #goalsNav {
+        display:none;
+    }
+
+    #hamburger {
+        display:block;
+        float:left;
+        padding:10px;
+    };
+
+}
+
+@media only screen and (min-width: 768px) {
+    nav {
+        background-color:#3e7cb6;
+        color:white;
+        text-align:center;
+        height:50px;
+    }
+
+    .nav {
+        display:inline-block;
+        padding:13px 20px;
+    }
+    
+    .nav:hover {
+        background-color: lightblue;
+    }
+    
+    .subNav {
+        height:0;
+        overflow:hidden;
+        background-color:#5593ce;
+    }
+    
+    .subNav > li:hover {
+        background-color:#66a8e6
+    }
+    
+    .showSubNav {
+        height:30px;
+        position:relative;
+        z-index:1;
+    }
+    
+    .goalNav {
+        display:inline-block;
+        width: 32%;
+        font-size:small;
+    }
+
+    #hamburger {
+        display:none;
+    }
+
+}
