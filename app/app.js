@@ -20,10 +20,10 @@ app.use(express.static('public'));
     });
 
     // POST data to the Team Page
-    app.post('/teamInfo', jsonParser, (req, res) => {
+    app.post('/team', jsonParser, (req, res) => {
         const body = req.body;
         const heading1 = body.heading1;
-        res.send(`<h2 class="sectionHeading teamBox">${heading1}</h2>`)
+        res.send("heading1")
     })
 // Start listening on specified port
 app.listen(port, () => {

@@ -3,16 +3,18 @@ let domContent = [];
 domContent.push("Our Team");
 
 function onResponse(response) {
-    console.log(respone.text())
+    console.log(response.text())
     return response.text();
 }
 
 function onTextReady(content) {
     const postTeamContent = document.querySelector('main')
-    postTeamContent.append(content)
+    postTeamContent.appendChild(content)
 }
 
 function onPageReady(e) {
+
+    console.log("real")
 
     const pageData = {
         heading1: domContent[0]
@@ -29,10 +31,13 @@ function onPageReady(e) {
         body: serializedTeamContent
     }
 
-    fetch('http://localhost:3000/teamInfo', fetchOptions)
+    console.log(fetchOptions);
+    fetch('http://localhost:3000/team', fetchOptions)
     .then(onResponse)
     .then(onTextReady)
 
+    console.log("real")
+
 }
 
-window.addEventListener("DOMContentLoaded", onPageReady, false);
+onPageReady();
