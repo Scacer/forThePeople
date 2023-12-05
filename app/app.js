@@ -2,11 +2,15 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+// Create bodyParser variable
+const bodyParser = require('body-parser');
+const jsonParser = bodyParser.json;
+
 // Direct express to the folder for static files
 app.use(express.static('public'));
 
 // Routing
-    // GET routes
+    // Get index.html on root path
     app.get('/', (req, res) => {
         res.sendFile('index.html', (err) => {
             if (err){
@@ -15,6 +19,12 @@ app.use(express.static('public'));
         })
     });
 
+    // POST data to the Team Page
+    app.post('/teamInfo', jsonParser, (req, res) => {
+        const body = req.body;
+        const heading1 = body.heading1;
+        res.send(`<h2 class="sectionHeading teamBox">${heading1}</h2>`)
+    })
 // Start listening on specified port
 app.listen(port, () => {
     console.log(`Now listening on port ${port}`)
