@@ -101,6 +101,7 @@ a:hover {
     display:block;
     text-wrap:wrap;
     margin:10px;
+    min-height:90px;
 }
 
 .teamInfo h4 {
