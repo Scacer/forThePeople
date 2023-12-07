@@ -4,7 +4,7 @@ const port = 3000;
 
 // Create bodyParser variable
 const bodyParser = require('body-parser');
-const jsonParser = bodyParser.json;
+const jsonParser = bodyParser.json();
 
 // Direct express to the folder for static files
 app.use(express.static('public'));
@@ -20,10 +20,10 @@ app.use(express.static('public'));
     });
 
     // POST data to the Team Page
-    app.post('/team', jsonParser, (req, res) => {
+    app.post('/teamPage', jsonParser, (req, res) => {
         const body = req.body;
         const heading1 = body.heading1;
-        res.send("heading1")
+        res.send(`${heading1}`);
     })
 // Start listening on specified port
 app.listen(port, () => {

@@ -54,6 +54,7 @@ a:hover {
     margin:10px 15%;
     width:70%;
     justify-content:center;
+    min-height:115px;
 }
 
 .teamName {
@@ -102,10 +103,6 @@ a:hover {
     text-wrap:wrap;
     margin:10px;
     min-height:90px;
-}
-
-.teamInfo h4 {
-    font-style:italic;
 }
 
 /* Media Queries */
