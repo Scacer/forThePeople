@@ -152,6 +152,23 @@ function postHeading2(content) {
     postTeamContent.append(content);
 }
 
+function postBio(content, bioID) {
+    let bioLocation = document.querySelector(bioID);
+    bioLocation.append(content);
+}
+
+function postDomBio(content) {
+    postBio(content, '#domAboutMe');
+}
+
+function postPuttyBio(content) {
+    postBio(content, '#puttyAboutMe');
+}
+
+function postSunnyBio(content) {
+    postBio(content, '#sunnyAboutMe');
+}
+
 function onPageReady(e) {
 
     generateHTMLframe();
@@ -182,6 +199,20 @@ function onPageReady(e) {
     .then(onResponse)
     .then(postHeading2); 
 
+    // fetches for the bios
+    fetch('/bios/dom.txt')
+    .then(onResponse)
+    .then(postDomBio);
+
+    fetch('/bios/putty.txt')
+    .then(onResponse)
+    .then(postPuttyBio);
+
+    fetch('/bios/sunny.txt')
+    .then(onResponse)
+    .then(postSunnyBio);
+
 }
 
+let bioID = '';
 window.addEventListener("DOMContentLoaded", onPageReady, false);
