@@ -1,24 +1,31 @@
 // Article Content
 
+// This Function comprises many smaller functions used to generate the elements/skeleton for the page
 function generateHTMLframe() {
     let articles = [];
     
     const domArticle = {
-        name: 'Dom Lansdale',
+        fName: 'Dom',
+        lName: 'Lansdale',
         image: 'images/dom.gif',
-        id: 'domAboutMe'
+        id: 'domAboutMe',
+        email: 'D.Lansdale@uea.ac.uk'
     }
 
     const puttyArticle = {
-        name: 'Putty Putland',
+        fName: 'Putty',
+        lName: 'Putland',
         image: 'images/putty.gif',
-        id: 'puttyAboutMe'
+        id: 'puttyAboutMe',
+        email: 'P.Putland@uea.ac.uk'
     }
 
     const sunnyArticle = {
-        name: 'Sunny Ledger',
+        fName: 'Sunny',
+        lName: 'Ledger',
         image: 'images/sunny.gif',
-        id: 'sunnyAboutMe'
+        id: 'sunnyAboutMe',
+        email: 'S.Ledger@uea.ac.uk'
     }
 
     articles.push(domArticle);
@@ -26,13 +33,59 @@ function generateHTMLframe() {
     articles.push(sunnyArticle);
 
     createHeading('main', 'heading1');
-    createSection('main', 'teamInfoSection');
+    const teamSection = createSection('main', 'teamInfoSection');
     for (let i = 0; i < articles.length; i++) {
-        createTeamInfoArticle('#teamInfoSection', articles[i]);
+        createTeamInfoArticle(teamSection, articles[i]);
     }
-    createHeading('main', 'heading2')
+
+    // Creates the bottom half of the HTML Frame
+    createHeading('main', 'heading2');
+    const contactSection = createSection('main', 'contactSection');
+
+    let newContactBox = createContactBox(contactSection, 'emailBox', 'Email Us!');
+    for (let i = 0; i < articles.length; i++) {
+        addContactInformation(newContactBox, articles[i]);
+    }
+    newContactBox = createContactBox(contactSection, 'newsletterBox', 'Get Our Newsletter!');
+    addNewsletterInfo(newContactBox);
+
     
     
+}
+
+function addNewsletterInfo(location) {
+    let newP = location.appendChild(document.createElement("p"));
+
+    newP.append('Want the latest updates and information on how to get involved with your local policy makers for sustainability? Click ');
+
+    newAnchor = newP.appendChild(document.createElement("a"));
+    newAnchor.href = 'newsletter.html'
+    newAnchor.innerHTML = 'here'
+
+    newP.append(' to sign up today!!')
+}
+
+function addContactInformation(location, articleContent) {
+    let newP = location.appendChild(document.createElement("p"));
+
+    newP.innerHTML = `${articleContent.fName} - `;
+
+    let newEmailFrame = newP.appendChild(document.createElement("a"));
+    
+    newEmailFrame.href = `mailto:${articleContent.email}`;
+    newEmailFrame.innerHTML = `${articleContent.email}`;
+}
+
+function createContactBox(location, boxID, heading) {
+    let newContactBox = location.appendChild(document.createElement("article"));
+
+    newContactBox.classList.add('teamBox', 'contactBox');
+    newContactBox.id = boxID;
+
+    let newHeading = newContactBox.appendChild(document.createElement("h3"));
+    newHeading.innerHTML= heading;
+
+    return newContactBox;
 }
 
 function createSection(location, sectionID){
@@ -40,6 +93,8 @@ function createSection(location, sectionID){
     let newSection = sectionParent.appendChild(document.createElement("section"));
 
     newSection.id = sectionID;
+
+    return newSection;
     
 }
 
@@ -51,12 +106,11 @@ function createHeading(location, headingID) {
 }
 
 function createTeamInfoArticle(location, articleInfo) {
-    const teamSection = document.querySelector(location);
-    let article = teamSection.appendChild(document.createElement("article"));
+    let article = location.appendChild(document.createElement("article"));
     article.classList.add('teamMember', 'teamBox')
 
     createImage(article, articleInfo.image);
-    createNameHeading(article, articleInfo.name);
+    createNameHeading(article, articleInfo);
     createAboutMe(article, articleInfo.id);
     
 }
@@ -73,7 +127,7 @@ function createNameHeading(location, name) {
     let newHeading = location.appendChild(document.createElement("h3"))
 
     newHeading.classList.add('teamName')
-    newHeading.innerHTML = name;
+    newHeading.innerHTML = `${name.fName} ${name.lName}`;
 }
 
 function createAboutMe(location, aboutMeID) {
@@ -85,13 +139,17 @@ function createAboutMe(location, aboutMeID) {
 // POST Stuff
 
 function onResponse(response) {
-    console.log(response.JSON());
     return response.text();
 }
 
-function onTextReady(content) {
+function postHeading1(content) {
     const postTeamContent = document.querySelector('#heading1');
-    postTeamContent.append(content.heading1);
+    postTeamContent.append(content);
+}
+
+function postHeading2(content) {
+    const postTeamContent = document.querySelector('#heading2');
+    postTeamContent.append(content);
 }
 
 function onPageReady(e) {
@@ -99,7 +157,8 @@ function onPageReady(e) {
     generateHTMLframe();
 
     const pageData = {
-        heading1: 'Our Goals'
+        heading1: 'Our Goals',
+        heading2: 'Contact Us'
     };
 
     const serializedTeamContent = JSON.stringify(pageData);
@@ -113,9 +172,15 @@ function onPageReady(e) {
         body: serializedTeamContent
     };
 
-    fetch('http://localhost:3000/teamPage', fetchOptions)
+    // fetch for Heading 1
+    fetch('http://localhost:3000/teamHeading1', fetchOptions)
     .then(onResponse)
-    .then(onTextReady);    
+    .then(postHeading1);   
+    
+    // fetch for Heading 2
+    fetch('http://localhost:3000/teamHeading2', fetchOptions)
+    .then(onResponse)
+    .then(postHeading2); 
 
 }
 

@@ -19,11 +19,20 @@ app.use(express.static('public'));
         })
     });
 
-    // POST data to the Team Page
-    app.post('/teamPage', jsonParser, (req, res) => {
+// POST data to the Team Page
+
+    // POST heading 1
+    app.post('/teamHeading1', jsonParser, (req, res) => {
         const body = req.body;
         const heading1 = body.heading1;
         res.send(`${heading1}`);
+    })
+
+    // POST heading 2
+    app.post('/teamHeading2', jsonParser, (req, res) => {
+        const body = req.body;
+        const heading2 = body.heading2;
+        res.send(`${heading2}`);
     })
 // Start listening on specified port
 app.listen(port, () => {
