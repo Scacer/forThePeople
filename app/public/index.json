@@ -1,0 +1,27 @@
+[
+    {
+        "tagName": "h3",
+        "innerText": "Welcome and gratitude"
+    },
+    {
+        "tagName": "p",
+        "innerText": "Join us on this transformative journey — a journey that champions the values of compassion, empathy, and unity. Together, we can rewrite the narrative of poverty, erase the specter of hunger, and build a foundation of robust health and well-being for all. Because our commitment is clear: we are for the people, and our mission is nothing less than a better world for all."
+    },
+    {
+        "tagName": "h3",
+        "innerText": "Local News"
+    },
+    {
+        "tagName": "p",
+        "innerText": "Dive into the heartbeat of our community with the freshest local updates, where every headline resonates with progress towards a community devoid of hunger, poverty, and health disparities. In this edition, we unveil the stories that showcase our collective commitment to positive change, shedding light on the remarkable endeavors shaping a brighter future right here in our midst."
+    },
+    {
+        "tagName": "h2",
+        "innerText": "Would you like to know more?"
+    },
+    {
+        "tagName": "a",
+        "href": "/newsletter.html",
+        "innerText": "Sign up for our newsletter"
+    }
+]

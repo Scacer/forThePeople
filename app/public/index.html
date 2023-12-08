@@ -4,55 +4,32 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="forThePutty.css">
+    <link rel="stylesheet" href="forThePeople.css">
     <title>For The People: Home</title>
-    <script src="https://kit.fontawesome.com/756f026ce3.js" crossorigin="anonymous"></script>
     <script src="goals.js" defer></script>
-    <script src="hamburger.js" defer></script>
+    <script src="index.js" type="module"></script>
 </head>
 <body>
     <header>
         <h1>For The People</h1>
-        <a id="hamburger">
-            <i class="fa-solid fa-bars"></i>
-        </a>
     </header>
     <nav>
-        <ul class="mainNav superNav">
+        <ul class="mainNav">
             <li class="nav"><a href="team.html">Team</a></li>
             <li class="nav active"><a href="index.html">Home</a></li>
-            <li class="nav" id="goalsNav"><a id="ourGoalsButton">Our Goals</a></li>
-            <li class = "nav"><a href="newsletter.html">Newsletter</a></li>
+            <li class="nav goalsNav"><a>Our Goals</a></li>
+            <li class="nav"><a href="newsletter.html">Newsletter</a></li>
         </ul>
-        <ul class="subNav superNav">
+        <ul class="subNav">
             <li class="goalNav"><a href="goal1.html">Goal 1</a></li>
             <li class="goalNav"><a href="goal2.html">Goal 2</a></li>
             <li class="goalNav"><a href="goal3.html">Goal 3</a></li>
         </ul>
     </nav>
     <!-- <img id="homeImg" src="homepageimg.jpg" alt="home page image"> -->
-    <main class="flex">
-
-        <section id="section-home">
-            <article class="home-article">
-                <h3>Welcome and gratitude</h3>
-                <p> Join us on this transformative journey — a journey that champions the values of compassion,
-                    empathy, and unity. Together, we can rewrite the narrative of poverty, erase the specter of hunger, and build a foundation of robust health and well-being for all.
-                    Because our commitment is clear: we are for the people, and our mission is nothing less than a better world for all.
-                </p>
-            </article>
-            
-            <article class="home-article">
-                <h3>Local News</h3>
-                <p> Here some text to talk about recent local news and invitation to newsletter 
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim ipsum quae in aspernatur fuga laudantium tenetur dicta, ratione consectetur ea ex impedit. Molestias laboriosam architecto alias mollitia. Repellendus, nulla nihil?
-                </p>
-                <div class="home-article">
-                <h2>Would you like to know more?</h2>
-                <button>Click here for Newsletter</button>
-            </div>
-            </article>
-           
+    <main class="flex home">
+        <section id="home-content">
+                <!-- Content will be loaded here from home.json file -->
         </section>
     </main>
 
