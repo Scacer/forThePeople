@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="forThePeople.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="GoalsPage.css">
     <link rel="stylesheet" href="headsOrTails.css">
-    <title>For The People: Home</title>
     <script src="https://kit.fontawesome.com/756f026ce3.js" crossorigin="anonymous"></script>
     <script src="goals.js" defer></script>
     <script src="hamburger.js" defer></script>
+    <script src="GoalsPage2.js" defer></script>
 </head>
-
 <body>
     <header>
         <h1>For The People</h1>
@@ -24,28 +23,27 @@
         <ul class="mainNav">
             <li class="nav"><a href="team.html">Team</a></li>
             <li class="nav"><a href="index.html">Home</a></li>
-            <li class="nav" id="goalsNav"><a id="ourGoalsButton">Our Goals</a></li>
-            <li class="nav active"><a href="newsletter.html">Newsletter</a></li>
+            <li class="nav active" id="goalsNav"><a id="ourGoalsButton">Our Goals</a></li>
+            <li class="nav"><a href="newsletter.html">Newsletter</a></li>
         </ul>
         <ul class="subNav">
             <li class="goalNav"><a href="GoalsPage1.html">End Poverty</a></li>
-            <li class="goalNav"><a href="GoalsPage2.html">Zero Hunger</a></li>
+            <li class="goalNav active"><a href="GoalsPage2.html">Zero Hunger</a></li>
             <li class="goalNav"><a href="GoalsPage3.html">Good Health and Wellbeing</a></li>
         </ul>
     </nav>
 
 
-    <main>
-        <section id="content-newsletter">
-            <h2 class="pageMessage">{{ message }}</h2>
-            <p class="pageMessage">{{{message2}}}</p>
-        </section>
+    <main id = "loadcontent"> 
+
     </main>
 
+    
     <footer>
         <p> Copyright ©2023 For the People</p>
         <a href="mailto:khn22rfu@uea.ac.uk">Produced by group Y8</a>
     </footer>
-</body>
 
+
+</body>
 </html>

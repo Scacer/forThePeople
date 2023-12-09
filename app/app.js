@@ -115,7 +115,7 @@ function storeSubmission(fname, lname, email, message) {
 async function sendEmail(fname, email) {
     const transporter = nodemailer.createTransport('smtp://5a8f78dbe25441:7ef08c6570cd3c@sandbox.smtp.mailtrap.io')
 
-    // transporter.sendMail(email, hi fname, thanks for signing up)}
+    // transporter.sendMail(email, hi fname, thanks for signing up)
 
     const info = transporter.sendMail({
         from: 'For The People <fTP@example.com>', // sender address

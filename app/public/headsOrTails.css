@@ -69,13 +69,17 @@ header > h1 {
         background:#3e7cb6;
         text-align:center;
     }
+    .nav:link, .goalNav:link {
+        text-decoration:none;
+    }
 
     .nav:hover, .goalNav:hover {
         background-color: #5593ce;
     }
 
     .active {
-        background-color: #5593ce;
+        font-weight:bold;
+        background-color:#90c3f1;
     }
 
 
