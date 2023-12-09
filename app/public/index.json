@@ -1,7 +1,7 @@
 [
     {
-        "tagName": "h3",
-        "innerText": "Welcome and gratitude"
+        "tagName": "h2",
+        "innerText": "Welcome and Gratitude"
     },
     {
         "tagName": "p",
@@ -16,12 +16,13 @@
         "innerText": "Dive into the heartbeat of our community with the freshest local updates, where every headline resonates with progress towards a community devoid of hunger, poverty, and health disparities. In this edition, we unveil the stories that showcase our collective commitment to positive change, shedding light on the remarkable endeavors shaping a brighter future right here in our midst."
     },
     {
-        "tagName": "h2",
+        "tagName": "h3",
         "innerText": "Would you like to know more?"
     },
     {
         "tagName": "a",
         "href": "/newsletter.html",
-        "innerText": "Sign up for our newsletter"
+        "innerText": "Sign up for our newsletter",
+        "thisID": "newsletterURL"
     }
 ]

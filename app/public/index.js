@@ -16,6 +16,9 @@ for (const row of content) {
     element.innerText = row.innerText;
     if (row.href) {
         element.href = row.href;
+    } 
+    if (row.thisID) {
+        element.id = row.thisID;
     }
     container.appendChild(element);
 }
