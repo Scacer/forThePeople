@@ -55,7 +55,7 @@ app.post('/newsletter', async (req, res) => {
     // Create templated version of HTML file
     const output = mustache.render(
         // Get the template file as a string
-        fs.readFileSync("templates/template.html").toString(),
+        fs.readFileSync("public/template.html").toString(),
 
         // Replace the template variable "message" with our actual message
         {
