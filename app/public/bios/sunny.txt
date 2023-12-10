@@ -1,1 +1,3 @@
-it works!!!!
+Sunny is 19 year old and a Computing Science student at UEA, their most recent projects include a movie database project written in Java and a Web Development project written across HTML, CSS, and Javascript.
+Sunny's role in the project is project co-ordinator, responsible for ensuring each member's code is compatible. Sunny also devloped the universal elements, including the navigation, header, and css for both of these.
+Aside from these contributions, Sunny produced the Teams page and the content on it.

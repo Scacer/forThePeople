@@ -1,1 +1,3 @@
-dom's bio
+Dom is a Computing Science student currently studying in the University of East Anglia. 
+His role in this project was coding and designing all 3 Goals pages, including implementation of the clickable image feature. 
+Dom was also responsible for Trello management ensuring the team was informed and updated.

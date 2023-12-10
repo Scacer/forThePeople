@@ -1,1 +1,1 @@
-putty's bio
+Putty had the responsibility of constructing the index page and the form page. The form page will involve the collection of user data sent to json file and set up a mailer to track email content sent via the page. Putty was also responsible for minute meetings and assistance with Trello management. The site guide will also be written by the individual.

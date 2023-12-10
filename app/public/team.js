@@ -7,7 +7,7 @@ function generateHTMLframe() {
     const domArticle = {
         fName: 'Dom',
         lName: 'Lansdale',
-        image: 'images/dom.gif',
+        image: 'images/dom.jpg',
         id: 'domAboutMe',
         email: 'D.Lansdale@uea.ac.uk'
     }
@@ -15,7 +15,7 @@ function generateHTMLframe() {
     const puttyArticle = {
         fName: 'Putty',
         lName: 'Putland',
-        image: 'images/putty.gif',
+        image: 'images/putty.jpg',
         id: 'puttyAboutMe',
         email: 'P.Putland@uea.ac.uk'
     }
@@ -23,7 +23,7 @@ function generateHTMLframe() {
     const sunnyArticle = {
         fName: 'Sunny',
         lName: 'Ledger',
-        image: 'images/sunny.gif',
+        image: 'images/sunny.PNG',
         id: 'sunnyAboutMe',
         email: 'S.Ledger@uea.ac.uk'
     }
@@ -174,7 +174,7 @@ function onPageReady(e) {
     generateHTMLframe();
 
     const pageData = {
-        heading1: 'Our Goals',
+        heading1: 'The Team',
         heading2: 'Contact Us'
     };
 
